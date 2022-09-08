@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="sidebar" style="display: none;">
+</div>
+
+<div class="login-reg-container">
+    <div class="login-reg-links">
+        <a href="{{ url_for('index') }}" class="login-reg-link">Login</a>
+        <a href="{{ url_for('register') }}" class="login-reg-link active">Register</a>
+    </div>
+
+    <div class="login-reg-input-area">
+        <label for="reg-email" class="login-reg-label">Enter your email:</label>
+        <input type="email" name="reg-email" id="reg-email" class="login-reg-input" autofocus>
+
+        <label for="reg-password" class="login-reg-label">Enter your password:</label>
+        <input type="password" name="reg-password" id="reg-password" class="login-reg-input">
+
+        <label for="reg-weight" class="login-reg-label">Enter your weight:</label>
+        <input type="number" name="reg-weight" id="reg-weight" class="login-reg-input">
+
+        <label for="reg-gender" class="login-reg-label">Enter your gender:</label>
+        <input type="text" name="reg-gender" id="reg-gender" class="login-reg-input">
+        
+        <div class="empty-space"></div>
+
+        <button type="submit" id="reg-submit">REGISTER</button>
+    </div>
+
+</div>
+
+{% endblock %}

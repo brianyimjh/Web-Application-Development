@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="upload-area">
+    <h1>Upload recordings</h1>
+    <p>Upload CSV file e.g. "admin@fitwell.com,2021-01-17T01:00,97,20,0,0,29</p>
+
+    <input type="file" name="csv-file" id="csv-file">
+
+    <div class="upload-radio">
+        <input type="radio" name="upload-log" id="upload-activity" value="0" checked>
+        <label for="upload-log">Upload Activity</label>
+
+        <input type="radio" name="upload-log" id="upload-food" value="1">
+        <label for="upload-log">Upload Food</label>
+    </div>
+
+    <hr>
+    <button type="submit" id="upload-submit">Upload</button>
+</div>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="sidebar">
+    <i class="fas fa-user"></i>
+    <div> <p> My id is: abc@def.com </p> </div>
+    <div> <p> My gender and weight </p> </div> 
+</div>
+
+<div class="upload-area">
+    <h1>Upload recordings</h1>
+    <p>Upload CSV file e.g. "admin@fitwell.com,2021-01-17T01:00,97,20,0,0,29</p>
+
+    <input type="file" name="csv-file" id="csv-file">
+    <hr>
+    <button type="submit" id="upload-submit">Upload</button>
+</div>
+
+{% endblock %}

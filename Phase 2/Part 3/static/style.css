@@ -1,0 +1,216 @@
+a {
+    font-size: 25px;
+}
+
+label {
+    font-size: 18px;
+}
+
+input {
+    font-size: 17px;
+}
+
+button[type=submit] {
+    border: none;
+    outline: none;
+    color: white;
+    background-color: blue;
+    font-size: 25px;
+    height: 50px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: green;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.navbar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: aqua;
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-link {
+    margin: 15px;
+}
+
+.entry-container {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.login-reg-container {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px lightgray;
+    padding: 20px;
+    width: 70%;
+    height: auto;
+}
+
+.login-reg-links {
+    display: flex;
+    flex-direction: row;
+}
+
+.login-reg-link {
+    border: none;
+    outline: none;
+    text-decoration: none;
+    color: lightgray;
+    border-bottom: solid 1px lightgray;
+    width: 230px;
+    margin-right: 10px;
+    text-align: center;
+    padding: 15px;
+}
+
+.login-reg-link.active {
+    border-bottom: solid 1px blue;
+    color: initial;
+}
+
+.login-reg-input-area {
+    display: flex;
+    flex-direction: column;
+    margin-top: 28px;
+    margin-bottom: 20px;
+}
+
+.login-reg-label {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.login-reg-input {
+    border: none;
+    outline: none;
+    border-bottom: solid 1px lightgray;
+    background-color: inherit;
+}
+
+.login-reg-input:hover {
+    border-bottom: solid 1px black;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: max-content;
+    margin-left: 70px;
+    padding-top: 25px;
+}
+
+.fas {
+	color: #29553b;
+	font-size: 100px;
+}
+
+.log-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 100px;
+    align-items: center;
+}
+
+.log-header {
+    text-align: center;
+}
+
+.log-input-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.log-input-items {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.empty-space {
+    display: inline-block; 
+    margin: 0; 
+    text-align: center; 
+    height: 20px;
+}
+
+.upload-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+}
+
+hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 100%;               
+    background-color:lightgray;
+    height: 2px;
+}
+
+path { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+.legend {
+    font-size: 16px;
+    font-weight: bold;
+    text-anchor: middle;
+}
+
+.notification {
+    font-size: x-large;
+}
+
+.is-danger {
+    color: red;
+}
+
+.chart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-radio {
+    display: flex;
+    flex-direction: row;
+}

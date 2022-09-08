@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="sidebar" style="display: none;">
+</div>
+
+<div class="login-reg-container">
+    
+    <div class="login-reg-links">
+        <a href="{{ url_for('index') }}" class="login-reg-link active">Login</a>
+        <a href="{{ url_for('register') }}" class="login-reg-link">Register</a>
+    </div>
+    
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="notification is-danger">
+                <!-- Display warning messages -->
+                {{ messages[0] }}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <div class="login-reg-input-area">
+        <label for="login-email" class="login-reg-label">Enter your email:</label>
+        <input type="email" name="login-email" id="login-email" class="login-reg-input" autofocus>
+
+        <label for="login-password" class="login-reg-label">Enter your password:</label>
+        <input type="password" name="login-password" id="login-password" class="login-reg-input">
+
+        <div class="empty-space"></div>
+        
+        <button type="submit" id="login-submit">LOGIN</button>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="log-container">
+    <div class="log-header">
+        <h1>Calorie Consumption</h1>
+        <p>Input Date/Time, your weight, and time spent on each exercise</p>
+    </div>
+    
+    <div class="log-input-area">
+        <div class="log-input-items">
+            <label for="log-date-time" class="log-label">Date & time</label>
+            <input type="datetime" name="log-date-time" id="log-date-time" class="log-input">
+            <label for="log-date-time" class="log-label">e.g. 2021-01-22T15:00</label>
+        </div>
+
+        <div class="log-input-items">
+            <label for="log-weight" class="log-label">Weight</label>
+            <input type="number" name="log-weight" id="log-weight" class="log-input" placeholder="0">
+            <label for="log-weight" class="log-label">kilograms</label>
+        </div>
+
+        <div class="log-input-items">
+            <label for="log-walking" class="log-label">Walking</label>
+            <input type="number" name="log-walking" id="log-walking" class="log-input" placeholder="0">
+            <label for="log-walking" class="log-label">minutes</label>
+        </div>
+        
+        <div class="log-input-items">
+            <label for="log-running" class="log-label">Running</label>
+            <input type="number" name="log-running" id="log-running" class="log-input" placeholder="0">
+            <label for="log-running" class="log-label">minutes</label>
+        </div>
+
+        <div class="log-input-items">
+            <label for="log-swimming" class="log-label">Swimming</label>
+            <input type="number" name="log-swimming" id="log-swimming" class="log-input" placeholder="0">
+            <label for="log-swimming" class="log-label">minutes</label>
+        </div>
+        
+        <div class="log-input-items">
+            <label for="log-bicycling" class="log-label">Bicycling</label>
+            <input type="number" name="log-bicycling" id="log-bicycling" class="log-input" placeholder="0">
+            <label for="log-bicycling" class="log-label">minutes</label>
+        </div>
+        
+        <button type="submit" id="log-submit">Submit</button>
+    </div>
+    
+    
+    <h2 id="log-output">Total calories to be consumed: 0</h2>
+</div>
+
+{% endblock %}

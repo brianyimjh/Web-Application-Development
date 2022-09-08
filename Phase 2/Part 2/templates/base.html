@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitwell</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="https://kit.fontawesome.com/e5bb12379f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar-container">
+        <div>
+            <img src="../static/logo.png" alt="logo" class="logo">
+        </div>
+
+        <div class="navbar-links">
+            {% if not current_user.is_authenticated %}
+            <a href="{{ url_for('register') }}" class="navbar-link">Register</a>
+            <a href="{{ url_for('index') }}" class="navbar-link">Login</a>
+            {% endif %}
+
+            {% if current_user.is_authenticated %}
+            <a href="{{ url_for('log') }}" class="navbar-link">Log</a>
+            {% endif %}
+
+            {% if current_user.is_authenticated %}
+            <a href="{{ url_for('dashboard') }}" class="navbar-link">Dashboard</a>
+            {% endif %}
+
+            {% if (current_user.is_authenticated) and (current_user.get_record()['email'] == 'admin@fitwell.com') %}
+            <a href="{{ url_for('upload') }}" class="navbar-link">Upload</a>
+            {% endif %}
+
+            {% if current_user.is_authenticated %}
+            <a href="{{ url_for('logout') }}" class="navbar-link">Logout</a>
+            {% endif %}
+        </div>
+    </nav>
+    
+    <div class="entry-container">
+        {% if current_user.is_authenticated %}
+        <div class="sidebar">
+            <i class="fas fa-user"></i>
+            <div> <p> My id is {{ current_user.get_record()['email'] }} </p> </div>
+            <div> <p> My gender is {{ current_user.get_record()['gender'] }} </p> </div> 
+            <div> <p> My dob is {{ current_user.get_record()['date_of_birth'].date() }} </p> </div> 
+            <div> <p> My weight is {{ current_user.get_record()['weight'] }} </p> </div> 
+        </div>
+        {% endif %}
+
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../static/log.js"></script>
+</body>
+</html>
